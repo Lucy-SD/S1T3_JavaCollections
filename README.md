@@ -27,23 +27,25 @@ This repository contains structured Java exercises focused on:
 
 ## 🛠️ Installation
 git clone https://github.com/Lucy-SD/S1T3_JavaCollections.git
+
 Open in IntelliJ: File > Open > [select folder]
+
 Set SDK: File > Project Structure > Project SDK > JDK 21
 
-▶️ Execution
+## ▶️ Execution
 Navigate to the desired exercise package
 Open the corresponding Main class
 Right-click → Run
 
-🌐 Deployment
+## 🌐 Deployment
 For educational purposes only.
 
-🤝 Contributions
+## 🤝 Contributions
 ⭐ Star the repo
 🪄 Fork it
 🛠️ Submit issues
 
-🎯 Learning Goals
+## 🎯 Learning Goals
 Collection Framework Mastery
 
 List and Set Operations
@@ -58,8 +60,8 @@ Thanks for visiting! 🚀
 
  🚀
 
-📚 Exercise Catalog
-📂 Level 1: Basic Collections Operations
+## 📚 Exercise Catalog
+### 📂 Level 1: Basic Collections Operations
 <details> <summary><b>Exercise 1: Month List and Set Operations</b></summary>
 Create Month class with name attribute
 
@@ -92,7 +94,8 @@ Save results to classificacio.txt
 Format: "Username: Score"
 
 </details>
-📂 Level 2: Advanced Collections Concepts
+
+### 📂 Level 2: Advanced Collections Concepts
 <details> <summary><b>Exercise 1: Restaurant HashSet Uniqueness</b></summary>
 Create Restaurant class (name, score)
 
