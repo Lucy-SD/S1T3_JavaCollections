@@ -32,7 +32,7 @@ public class ProgramRunner {
             List<String> countryName = new ArrayList<String>(countries.keySet());
             int id = (int) ((Math.random()*50) + 1);
             String randomCountry = countryName.get(id);
-            String capital = String.valueOf(countries.get(randomCountry));
+            String capital = countries.get(randomCountry);
 
             System.out.println("Cúal es la capital de " +  randomCountry + " ¿?");
             answer = scan.nextLine();
@@ -41,11 +41,11 @@ public class ProgramRunner {
                 score++;
                 System.out.println("Muy bien. Es correcto. Sumas un punto.");
             } else {
-                System.out.println("No es correcto. La capital de " + randomCountry + " es " + capital);
+                System.out.println("No es correcto. La capital de " + randomCountry + " es " + capital + ".");
             }
         }
 
-        System.out.println("--- Final del Juego ---");
+        System.out.println("    --- Fin del Juego ---   ");
 
         try {
             userFile = new FileWriter("D:\\Documents\\Cursos Programación\\Espe\\puntuacion.txt");
