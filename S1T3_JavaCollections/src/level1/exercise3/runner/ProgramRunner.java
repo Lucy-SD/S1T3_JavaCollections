@@ -3,7 +3,6 @@ package level1.exercise3.runner;
 import level1.exercise3.model.Country;
 
 import java.io.FileWriter;
-import java.io.PrintWriter;
 import java.util.*;
 
 public class ProgramRunner {
@@ -13,8 +12,6 @@ public class ProgramRunner {
         String name;
         String answer;
         int score = 0;
-        FileWriter userFile;
-        PrintWriter userScore;
         Map<String, String> countries;
         Country country = new Country();
 
@@ -45,17 +42,15 @@ public class ProgramRunner {
             }
         }
 
-        System.out.println("    --- Fin del Juego ---   ");
+        System.out.println("\n    --- Fin del Juego ---   \n");
 
-        try {
-            userFile = new FileWriter("D:\\Documents\\Cursos Programación\\Espe\\puntuacion.txt");
-            new PrintWriter(userFile);
+        try (FileWriter writer = new FileWriter("puntuacion.txt")){
+            writer.write("El jugador " + name + " ha ganado " + score + " puntos.");
+            System.out.println("El jugador " + name + " ha ganado " + score + " puntos.\nGracias por participar = )");
 
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
 
-        System.out.println("El jugador " + name + " ha ganado " + score + " puntos.\n" +
-                "Gracias por participar = )");
     }
 }

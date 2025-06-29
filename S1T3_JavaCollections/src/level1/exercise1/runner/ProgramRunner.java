@@ -8,7 +8,6 @@ public class ProgramRunner {
     public static void run() {
 
         List<Month> months = new ArrayList<Month>();
-        Set<Month> monthSet = new HashSet<>();
 
         Month enero = new Month("Enero");
         Month febrero = new Month("Febrero");
@@ -37,17 +36,7 @@ public class ProgramRunner {
         months.add(noviembre);
         months.add(diciembre);
 
-        monthSet.add(enero);
-        monthSet.add(febrero);
-        monthSet.add(marzo);
-        monthSet.add(abril);
-        monthSet.add(mayo);
-        monthSet.add(junio);
-        monthSet.add(julio);
-        monthSet.add(septiembre);
-        monthSet.add(octubre);
-        monthSet.add(noviembre);
-        monthSet.add(diciembre);
+        Set<Month> monthSet = new HashSet<>(months);
 
 
         System.out.println(" \n--- For-each del ArrayList sin Agosto --- ");
@@ -56,23 +45,22 @@ public class ProgramRunner {
         }
 
 
-        Iterator<Month> setIterator = monthSet.iterator();
+        Iterator<Month> setIteratorNoAugust = monthSet.iterator();
 
         System.out.println("\n *** Iteración del HashSet sin Agosto ***\n" +
                 "(el HashSet no mantiene un orden preestablecido)");
-        while (setIterator.hasNext()) {
-            Month month = setIterator.next();
+        while (setIteratorNoAugust.hasNext()) {
+            Month month = setIteratorNoAugust.next();
             System.out.println(month.getName());
         }
 
-
         months.add(7, agosto);
-        Iterator<Month> iterator = months.iterator();
 
+        Iterator<Month> setIteratorWithAugust = months.iterator();
 
         System.out.println("\n --- Iteración del ArrayList con Agosto --- ");
-        while (iterator.hasNext()) {
-            Month month = iterator.next();
+        while (setIteratorWithAugust.hasNext()) {
+            Month month = setIteratorWithAugust.next();
             System.out.println(month.getName());
 
         }
@@ -90,12 +78,12 @@ public class ProgramRunner {
             System.out.println(month.getName());
         }
 
-        Iterator<Month> setIter = monthSet.iterator();
+        Iterator<Month> setIteratorWithAugustAndOthers = monthSet.iterator();
 
         System.out.println("\n --- Iteración del HashSet con Agosto y meses duplicados ---\n" +
-                "              (no se agragan repetidos al Set) ");
-        while (setIter.hasNext()) {
-            Month month = setIter.next();
+                "              (no se agregan repetidos al Set) ");
+        while (setIteratorWithAugustAndOthers.hasNext()) {
+            Month month = setIteratorWithAugustAndOthers.next();
             System.out.println(month.getName());
         }
     }

@@ -16,7 +16,7 @@ public class Country {
     public Map<String, String> createCountriesMap () {
 
         try {
-            path = new FileReader("D:\\Documents\\Cursos Programación\\Espe\\countries.txt");
+            path = new FileReader("countries.txt");
             if (path.ready()) {
                 reader = new BufferedReader(path);
                 String line; //= reader.readLine();
