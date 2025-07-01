@@ -1,6 +1,6 @@
 package level1.exercise3.runner;
 
-import level1.exercise3.model.Country;
+import level1.exercise3.model.CountryMapManager;
 
 import java.io.FileWriter;
 import java.util.*;
@@ -13,7 +13,7 @@ public class ProgramRunner {
         String answer;
         int score = 0;
         Map<String, String> countries;
-        Country country = new Country();
+        CountryMapManager manager = new CountryMapManager();
 
 
         System.out.println("Bienvenida. Cúal es tu nombre ¿?");
@@ -22,7 +22,7 @@ public class ProgramRunner {
         System.out.println(name + ", vamos a jugar a \"encuentra la capital\"." +
                 "\nTendrás que adivinar las capitales de 10 países. Vamos ¡!");
 
-        countries = country.createCountriesMap();
+        countries = manager.createCountriesMap();
 
         for(int i = 0; i < 10; i++) {
 
